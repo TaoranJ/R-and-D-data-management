@@ -1,23 +1,3 @@
-# neo4j_for_patentsview
-
-Scripts handling PatentsView in Neo4j database. 
-
-## Installation
-
-```bash
-pip install pandas numpy neo4j
-```
-
-## Usage
-
-Put your `username` and `password` in a file, e.g., `credential.txt` like below
-```bash
-username
-password
-```
-
-Download PatentsView dataset and decompress.
-
 Run script with `python neo4j_load_patentsview.py credential.txt
 [path_to_patentsview_data]`
 
