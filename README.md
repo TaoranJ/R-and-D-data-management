@@ -13,7 +13,7 @@ neo4j_username
 neo4j_password
 ```
 
-## Datasets
+## Datasets and Usage
 
 **OAG** can be downloaded from [here](https://www.openacademic.ai/oag/). **Open Academic Graph (OAG)** unifies two billion-scale academic graphs: **Microsoft Academic Graph (MAG)** and **AMiner**.
 
@@ -37,10 +37,14 @@ cat [mag_dataset]/* > [mag.neo4j]/mag.all
 cd [mag.neo4j] && split -l 10000 mag.all && rm mag.all
 ```
 
+
 ### Aminer V1
 
 In total, 155 files named in pattern  `aminer_papers_[0-154].txt` are included in `Aminer V1` dataset. Running the script below to upload the dataset to Elasticsearch. The index name is set up by `--index` option and is `aminer_v1` by default. The script was tested on `Elasitcsearch >= 7.4` and publications which have both title and abstract.
 
+```bash
+python index_aminer_v1.py --inputs [path/aminer_papers*.txt]
+```
 
 ### PatentsView
 
